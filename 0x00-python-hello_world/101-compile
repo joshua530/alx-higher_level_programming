@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Compiling $PYFILEc ..."
+/usr/bin/pycompile "$PYFILEc"
