@@ -1,3 +1,13 @@
 #!/bin/bash
+TMP=""
+for (( i=0; i < ${#PYFILE}; ++i)); do
+    char=${PYFILE:i:1}
+    if [ $char == "." ]; then
+        break
+    fi
+    TMP="$TMP""$char"
+done
+
+export PYFILEc="$TMP.pyc"
 echo "Compiling $PYFILE ..."
 /usr/bin/python3 -m py_compile "$PYFILE"
