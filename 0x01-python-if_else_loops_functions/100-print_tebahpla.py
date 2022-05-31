@@ -6,4 +6,4 @@ def get_char(i):
 
 
 for i in range(122, 96, -1):
-    print("{:c}".format(get_char(i)), end="")
+    print("{:s}".format(get_char(i)), end="")
