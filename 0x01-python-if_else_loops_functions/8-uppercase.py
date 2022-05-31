@@ -5,7 +5,7 @@ def uppercase(str):
         ascii = ord(str[i])
         if ascii >= 65 and ascii <= 90:  # uppercase already
             to_print += str[i]
-        elif ascii >= 97 and ascii <= 122:  # lowercase
+        elif ascii >= 97 and ascii <= 122:  # lowercase, convert to uppercase
             to_print += chr(ord(str[i]) - 32)
         else:  # other characters
             to_print += str[i]
