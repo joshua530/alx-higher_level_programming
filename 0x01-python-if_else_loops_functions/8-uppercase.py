@@ -9,4 +9,4 @@ def uppercase(str):
             to_print += chr(ord(str[i]) - 32)
         else:  # other characters
             to_print += str[i]
-    print(f"{to_print:s}")
+    print("{:s}".format(to_print))
