@@ -4,5 +4,6 @@ def get_char(i):
         return chr(i)
     return chr(i - 32)
 
+
 for i in range(122, 96, -1):
     print("{:c}".format(get_char(i)), end="")
