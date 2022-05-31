@@ -34,6 +34,11 @@ int main(void)
 	printf("-----------------\n");
 	print_listint(head);
 
+	/* insert tail node */
+	insert_node(&head, 2000);
+	printf("-----------------\n");
+	print_listint(head);
+
 	free_listint(head);
 
 	/* empty list */
@@ -41,5 +46,6 @@ int main(void)
 	insert_node(&head, -27);
 	printf("-----------------\n");
 	print_listint(head);
+	free_listint(head);
 	return (0);
 }

@@ -22,5 +22,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 
 listint_t *insert_node(listint_t **head, int number);
+listint_t *create_node(int n, listint_t *next);
 
 #endif /* LISTS_H */
