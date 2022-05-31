@@ -29,11 +29,17 @@ int main(void)
 
 	print_listint(head);
 
+	/* insert head node */
 	insert_node(&head, -27);
-printf("-----------------\n");
+	printf("-----------------\n");
 	print_listint(head);
 
 	free_listint(head);
 
+	/* empty list */
+	head = NULL;
+	insert_node(&head, -27);
+	printf("-----------------\n");
+	print_listint(head);
 	return (0);
 }
