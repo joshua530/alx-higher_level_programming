@@ -9,4 +9,5 @@ def magic_calculation(a, b, c):
         return a + b
     return a * b - c
 
+
 dis.dis(magic_calculation)
