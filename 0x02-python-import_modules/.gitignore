@@ -2,4 +2,5 @@ main.py
 .vscode
 __pycache__
 *.pyc
+!hidden*.pyc
 insert
