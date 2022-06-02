@@ -6,5 +6,5 @@ if __name__ == "__main__":
     names = dir(hidden_4)
     names.sort()
     for name in names:
-        if name[0] != "_":
+        if not name.startswith("__"):
             print(name)
