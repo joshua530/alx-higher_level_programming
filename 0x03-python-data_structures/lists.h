@@ -23,5 +23,6 @@ void free_listint(listint_t *head);
 int is_palindrome(listint_t **head);
 listint_t *create_node(int n, listint_t *next);
 listint_t *copy_reverse(listint_t *head);
+int check_palindrome(listint_t **right, listint_t *left);
 
 #endif /* LISTS_H */
