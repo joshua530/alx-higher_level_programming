@@ -5,7 +5,7 @@ if __name__ == "__main__":
     size = len(argv)
     end_clause = "arguments:"
     if size == 2:
-        end_clause = "argument."
+        end_clause = "argument:"
     elif size == 1:
         end_clause = "arguments."
 
