@@ -37,6 +37,11 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 
+	if (tmp == NULL)
+	{
+		free_listint(copy_head);
+	}
+
 	return (1);
 }
 
