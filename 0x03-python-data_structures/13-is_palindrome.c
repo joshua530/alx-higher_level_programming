@@ -6,7 +6,7 @@ int is_palindrome(listint_t **head)
 	{
 		return (0);
 	}
-	return check_palindrome(head, (*head));
+	return (check_palindrome(head, (*head)));
 }
 
 /**
