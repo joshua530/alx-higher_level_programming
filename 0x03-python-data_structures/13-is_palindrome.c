@@ -26,19 +26,21 @@ int is_palindrome(listint_t **head)
 
 	/* compare the two lists node by node */
 	current = *head;
-	tmp = copy_head;
+	tmp = copy_head; /* reversed list iterator */
 	while (current && tmp)
 	{
 		if (current->n != tmp->n)
 		{
-			/* free_listint(copy_head); */
 			return (0);
 		}
 		current = current->next;
 		tmp = tmp->next;
 	}
 
-	/* free_listint(copy_head); */
+	if (tmp == NULL)
+	{
+		free_listint(copy_head);
+	}
 
 	return (1);
 }
