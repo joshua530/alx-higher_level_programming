@@ -48,7 +48,7 @@ int main(void)
 	else
 		printf("Linked list is not a palindrome\n");
 	free_listint(head);
-	
+
 	head = NULL;
 	add_nodeint_end(&head, 1);
 	add_nodeint_end(&head, 2);
