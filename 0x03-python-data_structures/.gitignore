@@ -4,3 +4,4 @@ __pycache__
 *.pyc
 !hidden*.pyc
 insert
+palindrome
