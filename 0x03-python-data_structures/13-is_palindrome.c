@@ -2,9 +2,9 @@
 
 /**
  * is_palindrome - wrapper function for check_palindrome
- * 
+ *
  * @head: head node of list
- * 
+ *
  * Return: 0 if not palindrome, 1 if palindrome
  */
 int is_palindrome(listint_t **head)
