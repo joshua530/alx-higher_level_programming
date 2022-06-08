@@ -3,10 +3,10 @@
 
 def weight_average(my_list=[]):
     """calculates weighted average
-    
+
     Args:
         my_list: the list whose weighted average we are finding
-        
+
     Returns:
         weighted average or 0 if calculation failed
     """
