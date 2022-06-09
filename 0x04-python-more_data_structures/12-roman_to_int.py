@@ -21,11 +21,14 @@ def roman_to_int(roman_string):
         for i in range(len(roman_string)):
             char = roman_string[i]
             int_val = roman_numerals[char]
-            if i + 1 < len(roman_string) and roman_numerals[roman_string[i+1]] > int_val:
+            if (
+                i + 1 < len(roman_string) and
+                roman_numerals[roman_string[i+1]] > int_val
+            ):
                 sum -= int_val
             else:
                 sum += int_val
-    except KeyError: # character that isn't roman numeral present in string
+    except KeyError:  # character that isn't roman numeral present in string
         return 0
 
     return sum
