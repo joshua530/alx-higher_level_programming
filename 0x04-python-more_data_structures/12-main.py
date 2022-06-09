@@ -24,6 +24,15 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 roman_number = "DUCCVII"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
+roman_number = "CXXIV"
+print("{} = {}".format(roman_number, roman_to_int(roman_number))) # 124
+
+roman_number = "XCIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number))) # 99
+
+roman_number = "LXXXIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number))) # 89
+
 roman_number = ""
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
