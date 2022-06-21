@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""Square class definition
+
+This module adds an __init__ method to the square class
+"""
+
+
 class Square:
     """A class that represents squares"""
 
