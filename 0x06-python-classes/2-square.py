@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""Square class
+
+This module adds size validation to the __init__ method
+"""
+
+
 class Square:
     """A class that represents squares"""
 

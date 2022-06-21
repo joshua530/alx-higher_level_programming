@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""Square class
+
+This module adds area calculation to the square class
+"""
+
+
 class Square:
     """A class that represents squares"""
 
