@@ -11,11 +11,6 @@ class Square:
     class Square definition
     Args:
         size (int): size of a side in square
-    Functions:
-        __init__(self, size)
-        size(self)
-        size(self, value)
-        area(self)
     """
 
     def __init__(self, size=0):
