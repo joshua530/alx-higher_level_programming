@@ -1,0 +1,37 @@
+# contains tests for add_integer
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+ float
+-------
+>>> add_integer(2.0)
+100
+
+ integer
+---------
+>>> add_integer(2)
+100
+
+ integer and float
+-------------------
+>>> add_integer(2, 2.0)
+4
+
+ less than zero
+----------------
+>>> add_integer(-2)
+96
+
+ not a number(a)
+--------------------
+>>> add_integer(0j)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+ not a number(b)
+--------------------
+>>> add_integer(1, 0j)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
