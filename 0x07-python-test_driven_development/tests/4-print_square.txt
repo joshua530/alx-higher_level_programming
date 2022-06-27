@@ -1,0 +1,42 @@
+# prints out a square
+
+>>> print_square = __import__('4-print_square').print_square # doctest: +REPORT_UDIFF
+
+# non int passed
+>>> print_square(0.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(0j)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# less than zero number passed
+>>> print_square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+# extremely large number passed ??
+
+# zero passed
+>>> print_square(0)
+
+
+# one passed
+>>> print_square(1)
+#
+
+# correct input passed
+>>> print_square(4)
+####
+####
+####
+####
