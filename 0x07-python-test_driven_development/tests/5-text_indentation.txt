@@ -1,0 +1,32 @@
+# contains tests for text_indentation
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# empty string
+>>> text_indentation('')
+
+
+# non string
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+# no special chars (. ? :)
+>>> text_indentation('bar')
+bar
+
+# string with special chars
+>>> text_indentation('foo..bar?baz:baz::')
+foo.
+<BLANKLINE>
+.
+<BLANKLINE>
+bar?
+<BLANKLINE>
+baz:
+<BLANKLINE>
+baz:
+<BLANKLINE>
+:
+<BLANKLINE>
