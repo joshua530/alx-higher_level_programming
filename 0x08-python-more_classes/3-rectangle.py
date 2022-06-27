@@ -8,6 +8,7 @@ It adds __str__ to Rectangle
 
 class Rectangle:
     """Rectangle class"""
+
     def __init__(self, width=0, height=0):
         """instantiates the rectangle"""
         self.width = width
@@ -39,7 +40,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value    
+        self.__height = value
 
     def area(self):
         """returns rectangle area"""
@@ -56,5 +57,5 @@ class Rectangle:
         rect = []
         for row in range(self.__height):
             tmp = ["#" for row in range(self.__width)]
-            rect.append(''.join(tmp))
+            rect.append("".join(tmp))
         return "\n".join(rect)

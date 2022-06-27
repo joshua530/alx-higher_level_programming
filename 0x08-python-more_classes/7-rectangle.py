@@ -9,13 +9,14 @@ adds public class property 'print_symbol'
 class Rectangle:
     """
     Rectangle class
-    
+
     Attributes:
         number_of_instances: total number of instantiated rectangles
         print_symbol: symbol[s] used when representing rectangle as a string
     """
+
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """instantiates the rectangle"""
@@ -49,7 +50,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value    
+        self.__height = value
 
     def area(self):
         """returns rectangle area"""
@@ -68,7 +69,7 @@ class Rectangle:
 
         for row in range(self.__height):
             tmp = [print_symbol for row in range(self.__width)]
-            rect.append(''.join(tmp))
+            rect.append("".join(tmp))
         return "\n".join(rect)
 
     def __repr__(self):

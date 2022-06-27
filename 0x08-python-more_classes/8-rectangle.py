@@ -9,13 +9,14 @@ adds static method bigger_or_equal
 class Rectangle:
     """
     Rectangle class
-    
+
     Attributes:
         number_of_instances: total number of instantiated rectangles
         print_symbol: symbol[s] used when representing rectangle as a string
     """
+
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """instantiates the rectangle"""
@@ -49,7 +50,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value    
+        self.__height = value
 
     def area(self):
         """returns rectangle area"""
@@ -64,10 +65,10 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """compares two rectangles using their area
-        
+
         Returns:
             the larger rectangle or rect_1 if the areas are the same
-            
+
         Throws:
             TypeError: if either of the rectangles is not a Rectangle instance
         """
@@ -92,7 +93,7 @@ class Rectangle:
 
         for row in range(self.__height):
             tmp = [print_symbol for row in range(self.__width)]
-            rect.append(''.join(tmp))
+            rect.append("".join(tmp))
         return "\n".join(rect)
 
     def __repr__(self):
