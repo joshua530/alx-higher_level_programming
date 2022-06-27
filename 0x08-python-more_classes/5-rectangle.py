@@ -2,7 +2,7 @@
 """
 This module contains rectangle class definition
 
-It adds __repr__ to Rectangle
+It adds __del__ to Rectangle
 """
 
 
