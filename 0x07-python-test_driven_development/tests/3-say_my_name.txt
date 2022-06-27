@@ -1,0 +1,23 @@
+# contains tests for say_my_name
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+# non string passed as first name
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# non string passed as last name
+>>> say_my_name("", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+# single string passed
+>>> say_my_name("John")
+John 
+
+# two strings passed
+>>> say_my_name("John", "Doe")
+John Doe
