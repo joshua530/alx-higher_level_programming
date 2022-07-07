@@ -7,15 +7,16 @@ import csv
 
 class Base:
     """The base class
-    
+
     Attributes:
         __nb_objects: number of instantiated base objects
     """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
         """Instantiates a base class insatnce
-        
+
         Args:
             id: the id of the instance
         """
@@ -28,7 +29,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns json representation of a list of dictionaries
-        
+
         Args:
             list_dictionaries: the list of dictionaries
         """
@@ -39,9 +40,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Saves object instances to a file
-        
+
         The objects are first converted to json then saved to a file
-        
+
         Args:
             list_objs: list of objects to save
         """
@@ -56,7 +57,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the json string representation
-        
+
         Args:
             json_string: the string to be converted to a list
         """
@@ -67,7 +68,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Instantiates an object with properties from the provided dictionary
-        
+
         Returns:
             the instantiated object
         """
@@ -81,13 +82,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Loads instances from a file
-        
+
         Returns:
             list of loaded instances if file exists. An empty list is
             returned if required file does not exist
         """
         file = cls.__name__ + ".json"
-        objs =[]
+        objs = []
         try:
             with open(file, "r") as f:
                 data = cls.from_json_string(f.read())
@@ -106,10 +107,9 @@ class Base:
             writer = csv.writer(f)
             for obj in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow(
-                        [obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
                 else:
-                    writer.writerow([obj.id,obj.size,obj.x,obj.y])
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -120,8 +120,19 @@ class Base:
             reader = csv.reader(f)
             for row in reader:
                 if cls.__name__ == "Rectangle":
-                    data = {"id": int(row[0]), "width":int(row[1]), "height":int(row[2]), "x":int(row[3]),"y":int(row[4])}
+                    data = {
+                        "id": int(row[0]),
+                        "width": int(row[1]),
+                        "height": int(row[2]),
+                        "x": int(row[3]),
+                        "y": int(row[4]),
+                    }
                 elif cls.__name__ == "Square":
-                    data = {"id":int(row[0]), "size":int(row[1]), "x":int(row[2]),"y":int(row[3])}
+                    data = {
+                        "id": int(row[0]),
+                        "size": int(row[1]),
+                        "x": int(row[2]),
+                        "y": int(row[3]),
+                    }
                 objects.append(cls.create(**data))
         return objects

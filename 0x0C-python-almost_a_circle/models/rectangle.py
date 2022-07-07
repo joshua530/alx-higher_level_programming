@@ -6,9 +6,10 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class definition"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Instantiates a rectangle
-        
+
         Args:
             width: rectangle width
             height: rectangle height
@@ -72,7 +73,7 @@ class Rectangle(Base):
 
     def validate_int(self, name, value):
         """checks whether a value is an integer
-        
+
         Throws:
             TypeError: if value is not an integer
         """
@@ -81,7 +82,7 @@ class Rectangle(Base):
 
     def validate_gt_zero(self, name, value):
         """checks whether a value is greater than zero
-        
+
         Throws:
             ValueError: if value is <= 0
         """
@@ -90,7 +91,7 @@ class Rectangle(Base):
 
     def validate_gte_zero(self, name, value):
         """checks whether a value is greater than or equal to zero
-        
+
         Throws:
             ValueError: if value is < 0
         """
@@ -103,9 +104,9 @@ class Rectangle(Base):
 
     def convert_to_str(self):
         """Converts rectangle to printable character representation"""
-        rect = "\n" * self.y + \
-                "\n".join(
-                    (" " * self.x + "#" * self.width) for row in range(self.height))
+        rect = "\n" * self.y + "\n".join(
+            (" " * self.x + "#" * self.width) for row in range(self.height)
+        )
         return rect
 
     def display(self):
@@ -114,12 +115,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """Returns Rectangle string representation"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
-            .format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
 
     def update(self, *args, **kwargs):
         """updates rectangles' values
-        
+
         The order of args is:
         - id
         - width
@@ -130,7 +132,7 @@ class Rectangle(Base):
         """
         if args is not None and len(args) > 0:
             for i in range(len(args)):
-                if i > 4: # no need to loop over excess args
+                if i > 4:  # no need to loop over excess args
                     break
                 if i == 0:
                     self.id = args[i]

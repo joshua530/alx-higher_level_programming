@@ -6,6 +6,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """The Square class"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Instantiates a Square instance"""
         super().__init__(size, size, x, y, id)
@@ -23,7 +24,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """updates square's values
-        
+
         If args exists and is not empty, kwargs is skipped,
         else kwargs is used.
 
@@ -44,7 +45,7 @@ class Square(Rectangle):
                 elif k == 3:
                     self.y = v
                 else:
-                    break # don't loop over excess args
+                    break  # don't loop over excess args
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
@@ -57,12 +58,13 @@ class Square(Rectangle):
 
     def __str__(self):
         """Returns Square string representation"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d}"\
-            .format(self.id, self.x, self.y, self.width)
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
+            self.id, self.x, self.y, self.width
+        )
 
     def to_dictionary(self):
         """Returns Square dictionary representation
-        
+
         Returned dictionary has the keys:
         - id
         - size
