@@ -8,4 +8,4 @@ Contains simple mysql scripts intended to show various use cases of sql language
 
 ## Environment
 - Operating system: Ubuntu 20.04 LTS
-- Mysql 8.0.30-0ubuntu0.20.04.2 for Linux on x86_64
+- Mysql 8.0.3
