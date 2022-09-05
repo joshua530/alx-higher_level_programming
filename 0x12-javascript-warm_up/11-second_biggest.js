@@ -4,17 +4,7 @@ if (process.argv.length === 2 || process.argv.length === 3) {
   process.exit(0);
 }
 
-let largest = parseInt(process.argv[2], 10);
-let largest2;
-for (let i = 3; i < process.argv.length; ++i) {
-  const current = parseInt(process.argv[i], 10);
-  if (largest < current) {
-    largest2 = largest;
-    largest = current;
-  }
-}
-// all the numbers are equal
-if (isNaN(largest2)) {
-  largest2 = largest;
-}
-console.log(largest2);
+const nums = process.argv.slice(2);
+nums.sort((a, b) => a - b);
+nums.pop();
+console.log(nums[nums.length - 1]);
