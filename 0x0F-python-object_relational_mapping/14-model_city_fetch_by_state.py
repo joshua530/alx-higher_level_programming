@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+Fetches cities by state
 """
 from sys import argv
 from model_state import Base, State
