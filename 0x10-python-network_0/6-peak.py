@@ -6,40 +6,30 @@ Contains function that finds the peak in a given list of numbers
 
 def find_peak(list_of_integers):
     """Finds the peak in a given list of integers
+
+    Peak: a number n in the list where n is greater than each of it's neighbours
     """
     if len(list_of_integers) == 0:
         return None
+    if len(list_of_integers) == 1:
+        return list_of_integers[0]
 
-    # O(nlog(n)) time complexity
-    sorted_l = sort_list(list_of_integers)
-    # O(k)
-    return sorted_l[len(sorted_l) - 1]
+    mid = len(list_of_integers) // 2
+    left = 0
+    right = len(list_of_integers) - 1
+    l_ints = list_of_integers
 
+    if l_ints[0] > l_ints[1]:
+        return l_ints[0]
+    if l_ints[right] > l_ints[right - 1]:
+        return l_ints[right]
 
-def sort_list(list_of_integers):
-    """Sorts a given list of integers"""
-    if len(list_of_integers) == 1 or len(list_of_integers) == 0:
-        return list_of_integers
+    while left <= mid:
+        left += 1
+        right -= 1
 
-    mid = int(len(list_of_integers) / 2)
-    left = sort_list(list_of_integers[:mid])
-    right = sort_list(list_of_integers[mid:])
-
-    i_left = 0
-    i_right = 0
-    sorted_l = []
-    while i_left < len(left) and i_right < len(right):
-        if left[i_left] < right[i_right]:
-            sorted_l.append(left[i_left])
-            i_left += 1
-        else:
-            sorted_l.append(right[i_right])
-            i_right += 1
-
-    # add any left over numbers in either of the lists to the sorted list
-    for i in range(i_left, len(left)):
-        sorted_l.append(left[i])
-    for i in range(i_right, len(right)):
-        sorted_l.append(right[i])
-
-    return sorted_l
+        if l_ints[left] >= l_ints[left - 1] and l_ints[left] >= l_ints[left + 1]:
+            return l_ints[left]
+        if l_ints[right] >= l_ints[right + 1] and l_ints[right] >= l_ints[right - 1]:
+            return l_ints[right]
+    return None
