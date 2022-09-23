@@ -11,9 +11,9 @@ if __name__ == '__main__':
     repo = sys.argv[1]
     owner = sys.argv[2]
     r = requests.get(
-        'https://api.github.com/repos/{}/{}/commits'.format(repo, owner))
+        'https://api.github.com/repos/{}/{}/commits?page=1&per_page=10'.format(repo, owner))
     commits = r.json()
-    for commit in commits[:10]:
+    for commit in commits:
         author = commit.get('commit').get('author').get('name')
         sha = commit.get('sha')
         print('{}: {}'.format(sha, author))
